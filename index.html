@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="../components/jquery-ui-1.12.1/jquery-ui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../components/jquery-mobile-1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <title>Miletracker</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- HOME PAGE -->
+      <div data-role="page" id="home">
+        <header data-role="header" data-theme="b">
+          <h1>Miletracker</h1>
+        </header>
+        <div data-role="navbar">
+          <ul>
+            <li>
+              <a href="#home" data-transition="none" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a href="#add" data-transition="none" data-icon="plus">Add Run</a>
+            </li>
+          </ul>
+        </div>
+        <div data-role="content">
+          <h3>Welcome to the Miltracker App</h3>
+          <p>You can track your running, jogging or walking miles</p>
+
+          <h3>Your latest runs</h3>
+          <ul
+            id="stats"
+            data-role="listview"
+            data-filter="true"
+            data-filter-placeholder="Filter runs by date or distance"
+            data-inset="true"
+          ></ul>
+          <button id="clearRuns" data-theme="b">Clear Total Mileage</button>
+        </div>
+        <footer data-role="footer" data-theme="b">
+          <h4>Miletracker &copy; 2019 All rights reserve</h4>
+        </footer>
+      </div>
+
+      <!-- ADD PAGE -->
+      <div data-role="page" id="add">
+        <header data-role="header" data-theme="b">
+          <h1>Miletracker</h1>
+        </header>
+        <div data-role="navbar">
+          <ul>
+            <li>
+              <a href="#home" data-transition="none" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a href="#add" data-transition="none" data-icon="plus">Add Run</a>
+            </li>
+          </ul>
+        </div>
+        <div data-role="content">
+          <h3>Add Run</h3>
+          <form action="" autocomplete="off">
+            <label for="addMiles">Enter Miles: </label>
+            <input type="number" id="addMiles" />
+            <label for="addDate">Add Date: </label>
+            <input
+              type="text"
+              data-role="data"
+              class="date"
+              data-inline="true"
+              id="addDate"
+            />
+            <button id="submitAdd" data-theme="b">Submit</button>
+          </form>
+        </div>
+        <footer data-role="footer" data-theme="b">
+          <h4>Miletracker &copy; 2019 All rights reserve</h4>
+        </footer>
+      </div>
+
+      <!-- EDIT PAGE -->
+      <div data-role="page" id="edit">
+        <header data-role="header" data-theme="b">
+          <h1>Miletracker</h1>
+        </header>
+        <div data-role="navbar">
+          <ul>
+            <li>
+              <a href="#home" data-transition="none" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a href="#add" data-transition="none" data-icon="plus">Add Run</a>
+            </li>
+          </ul>
+        </div>
+        <div data-role="content">
+          <h3>Add Run</h3>
+          <form action="" autocomplete="off">
+            <label for="addMiles">Enter Miles: </label>
+            <input type="text" id="editMiles" />
+            <label for="addDate">Add Date: </label>
+            <input
+              type="text"
+              data-role="data"
+              class="date"
+              data-inline="true"
+              id="editDate"
+            />
+            <button id="submitEdit" data-theme="b">Update</button>
+          </form>
+        </div>
+
+        <footer data-role="footer" data-theme="b">
+          <h4>Miletracker &copy; 2019 All rights reserve</h4>
+        </footer>
+      </div>
+    </div>
+
+    <script src="../components/jquery-1.9.1/jquery-1.9.1.min.js"></script>
+    <script src="../components/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="../components/jquery-mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+    <script>
+      $(function() {
+        $(".date").datepicker();
+      });
+    </script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

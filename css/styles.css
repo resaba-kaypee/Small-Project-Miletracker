@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  text-align: center;
+  overflow-y: hidden;
+}
+
+body .container {
+  height: 100%;
+  position: relative;
+}
+
+body .container footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+
+body ul {
+  display: block;
+}
+
+body .controls {
+  float: right;
+}
+
+body #stats p {
+  color: red;
+}
+/*# sourceMappingURL=styles.css.map */
